@@ -1,6 +1,23 @@
-# RandomEmpData
+# Employee Details 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.6.
+
+This codebase was created to demonstrate a fully fledged application built with Angular that interacts with an faker.js server to fetch the random employee data based on the user action event. This application includes CRUD operations, pagination, filtering, and more. 
+
+## Description
+1. Loads the Employee data from the mock server randomly on eveny reload button click.
+2. User can able to view, edit and delete the individual employee data.
+3. User can able to view the emplyees graph based on his salary and working hours.
+4. User has an filter option with the datatable can able to filter with the specific data.
+
+## Plugins Used
+1. Faker.js to get the random employee data.
+2. Apex charts to show the employee salary and working hours on quaterly basis.
+3. mat-datatable to show the employee data table with features like filtering, view, edit and delete the specific row data.
+
+## Installation
+npm i
+npm start
 
 ## Development server
 

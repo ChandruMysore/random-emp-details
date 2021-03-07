@@ -1,0 +1,128 @@
+
+<div>
+    <h1 mat-dialog-title>View Employee</h1>
+    <button mat-mini-fab class="button-position" color="primary" mat-dialog-close>
+        <i class="material-icons">
+            close
+        </i>
+      </button>
+</div>
+
+<div mat-dialog-content>
+    <div id="chart">
+        <apx-chart
+          [series]="chartOptions.series"
+          [chart]="chartOptions.chart"
+          [yaxis]="chartOptions.yaxis"
+          [xaxis]="chartOptions.xaxis"
+          [labels]="chartOptions.labels"
+          [stroke]="chartOptions.stroke"
+          [title]="chartOptions.title"
+          [dataLabels]="chartOptions.dataLabels"
+          [fill]="chartOptions.fill"
+          [tooltip]="chartOptions.tooltip"
+        ></apx-chart>
+      </div>
+    <form [formGroup]="formInstance">
+        <div class="container">
+            <div class="col-md-12">
+                <div class="col-md-3">
+                    <mat-form-field class="fullWidth" appearance="outline">
+                        <mat-label>Name *</mat-label>
+                        <input matInput type="text" name="name" formControlName="name" readonly>
+                        <mat-error *ngIf="formInstance.controls['name']?.errors?.required">field required</mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-3">
+                    <mat-form-field class="fullWidth" appearance="outline">
+                        <mat-label>Email *</mat-label>
+                        <input matInput type="text" name="email" formControlName="email" readonly/>
+                        <mat-error *ngIf="formInstance.controls['email']?.errors?.required">field required</mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-3">
+                    <mat-form-field class="fullWidth" appearance="outline">
+                        <mat-label>Job Title *</mat-label>
+                        <input matInput type="text" name="jobtitle" formControlName="jobtitle" readonly/>
+                        <mat-error *ngIf="formInstance.controls['jobtitle']?.errors?.required">field required</mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-3">
+                    <mat-form-field class="fullWidth" appearance="outline">
+                        <mat-label>Country *</mat-label>
+                        <input matInput type="text" name="country" formControlName="country" readonly/>
+                        <mat-error *ngIf="formInstance.controls['country']?.errors?.required">field required</mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="col-md-3">
+                    <mat-form-field class="fullWidth" appearance="outline">
+                        <mat-label>Salary Q1 *</mat-label>
+                        <input matInput type="number" name="salaryq1" formControlName="salaryq1" readonly/>
+                        <mat-error *ngIf="formInstance.controls['salaryq1']?.errors?.required">field required
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-3">
+                    <mat-form-field class="fullWidth" appearance="outline">
+                        <mat-label>Salary Q2 *</mat-label>
+                        <input matInput type="number" name="salaryq2" formControlName="salaryq2" readonly/>
+                        <mat-error *ngIf="formInstance.controls['salaryq2']?.errors?.required">field required
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-3">
+                    <mat-form-field class="fullWidth" appearance="outline">
+                        <mat-label>Salary Q3 *</mat-label>
+                        <input matInput type="number" name="salaryq3" formControlName="salaryq3" readonly/>
+                        <mat-error *ngIf="formInstance.controls['salaryq3']?.errors?.required">field required
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-3">
+                    <mat-form-field class="fullWidth" appearance="outline">
+                        <mat-label>Salary Q4 *</mat-label>
+                        <input matInput type="number" name="salaryq4" formControlName="salaryq4" readonly/>
+                        <mat-error *ngIf="formInstance.controls['salaryq4']?.errors?.required">field required
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="col-md-3">
+                    <mat-form-field class="fullWidth" appearance="outline">
+                        <mat-label>Working Hours Q1 *</mat-label>
+                        <input matInput type="number" name="workinghoursq1" formControlName="workinghoursq1" readonly/>
+                        <mat-error *ngIf="formInstance.controls['workinghoursq1']?.errors?.required">field required
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-3">
+                    <mat-form-field class="fullWidth" appearance="outline">
+                        <mat-label>Working Hours Q2 *</mat-label>
+                        <input matInput type="number" name="workinghoursq2" formControlName="workinghoursq2" readonly/>
+                        <mat-error *ngIf="formInstance.controls['workinghoursq2']?.errors?.required">field required
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-3">
+                    <mat-form-field class="fullWidth" appearance="outline">
+                        <mat-label>Working Hours Q3 *</mat-label>
+                        <input matInput type="number" name="workinghoursq3" formControlName="workinghoursq3" readonly/>
+                        <mat-error *ngIf="formInstance.controls['workinghoursq3']?.errors?.required">field required
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-3">
+                    <mat-form-field class="fullWidth" appearance="outline">
+                        <mat-label>Working Hours Q4 *</mat-label>
+                        <input matInput type="number" name="workinghoursq4" formControlName="workinghoursq4" readonly/>
+                        <mat-error *ngIf="formInstance.controls['workinghoursq4']?.errors?.required">field required
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
